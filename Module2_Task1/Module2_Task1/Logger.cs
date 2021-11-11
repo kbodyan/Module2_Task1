@@ -9,7 +9,6 @@ namespace Module2_Task1
 
         private StringBuilder _log = new StringBuilder("Program Log:/\n");
 
-        private DateTime _time = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second, DateTime.Now.Millisecond);
         static Logger()
         {
         }
@@ -25,7 +24,7 @@ namespace Module2_Task1
 
         public void PushToLog(LogType type, string message = "No massage")
         {
-            string log = _time.ToString() + " : " + type.ToString() + " : " + message + "\n";
+            string log = DateTime.Now.ToString() + " : " + type.ToString() + " : " + message + "\n";
             Console.Write(log);
             _log.Append(log);
         }

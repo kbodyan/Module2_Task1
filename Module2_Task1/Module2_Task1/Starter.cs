@@ -6,8 +6,8 @@ namespace Module2_Task1
     {
         internal void Run()
         {
-            Random rand = new Random();
-            Action tempAction = new Action();
+            var rand = new Random();
+            var tempAction = new Action();
             Result tempResult;
             for (int i = 0; i < 100; i++)
             {
