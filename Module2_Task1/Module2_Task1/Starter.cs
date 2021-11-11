@@ -19,6 +19,7 @@ namespace Module2_Task1
                     case 2:
                         tempResult = tempAction.WarningLog();
                         break;
+                    case 3:
                     default:
                         tempResult = tempAction.ErrorLog();
                         break;
@@ -29,6 +30,8 @@ namespace Module2_Task1
                     Logger.LoggerInstance.PushToLog(LogType.Error, "Action failed by a reason: " + tempResult.ErrorMessage);
                 }
             }
+
+            Logger.LoggerInstance.LogToFile();
         }
     }
 }
